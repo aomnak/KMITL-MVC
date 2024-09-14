@@ -35,8 +35,8 @@ def save_cows_data(cows, filename="cows_data.json"):
         }
         cows_data.append(cow_data)
     
-    with open(filename, 'w') as file:
-        json.dump(cows_data, file, indent=4)
+    with open(filename, 'w', encoding='utf-8') as file:
+        json.dump(cows_data, file, indent=4, ensure_ascii=False)
 
 
 def generate_report(cows):
